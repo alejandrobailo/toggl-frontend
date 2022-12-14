@@ -8,12 +8,13 @@ export const Container = styled.label`
   align-items: center;
   width: 640px;
   height: 480px;
-  background-color: #2c2f33;
+  background-color: var(--terciaryColor);
   border-radius: 16px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 
-  ${({ dragOver }) => dragOver && 'background-color: #99aab5;'}
+  ${({ dragOver }) =>
+    dragOver && 'background-color: var(--secondaryColorColor);'}
 `;
 
 export const ItemContainer = styled.div`
@@ -22,7 +23,7 @@ export const ItemContainer = styled.div`
   margin-top: 20px;
   flex-direction: column;
   justify-content: center;
-  background-color: #23272a;
+  background-color: var(--backgroundColor);
   border-radius: 8px;
 
   p {
@@ -38,12 +39,12 @@ export const UploadButton = styled.label`
   align-items: center;
   height: 40px;
   margin-top: 16px;
-  border: 2px solid #99aab5;
+  border: 2px solid var(--secondaryColor);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   &:hover {
-    background-color: #7289da;
+    background-color: var(--mainColor);
   }
 `;
 
@@ -55,18 +56,18 @@ export const SubmitButton = styled.button`
   align-items: center;
   height: 40px;
   margin-top: 16px;
-  border: 2px solid #99aab5;
+  border: 2px solid var(--secondaryColor);
   border-radius: 8px;
-  background-color: #7289da;
+  background-color: var(--mainColor);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: #99aab5;
+    background-color: var(--secondaryColor);
   }
 
   &:disabled {
-    background-color: #99aab5;
+    background-color: var(--secondaryColor);
     cursor: default;
   }
 `;
@@ -77,11 +78,11 @@ const Message = styled.p`
 `;
 
 export const SuccessMessage = styled(Message)`
-  color: #43b581;
+  color: var(--successColor);
 `;
 
 export const ErrorMessage = styled(Message)`
-  color: #f04747;
+  color: var(--errorColor);
 `;
 
 export const Spinner = styled.div`
